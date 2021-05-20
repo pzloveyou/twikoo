@@ -13,8 +13,11 @@ async function initTcb (options) {
 }
 
 async function init (options = {}) {
-  const data = await initTcb(options)
-  render(data, options)
+  let tcb = null
+  if (options.envId) {
+    tcb = await initTcb(options)
+  }
+  render(tcb, options)
 }
 
 async function getCommentsCount (options = {}) {

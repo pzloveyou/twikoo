@@ -17,7 +17,8 @@
   <script type="text/javascript">
     function init() {
       twikoo.init({
-        envId: document.getElementById('envId').value,
+        // envId: document.getElementById('envId').value,
+        serverURL: document.getElementById('serverURL').value,
         el: '#tcomment',
         region: document.getElementById('region').value,
         path: document.getElementById('path').value,
@@ -56,6 +57,12 @@
             <label class="label">环境 ID | Environment ID: <code>envId</code></label>
             <div class="control">
               <input class="input" id="envId" type="text" placeholder="e.g imaegoo-16fe3d" value="twikoo-1gs9l0fb17e7897a">
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Vercel 环境地址 | Server URL: <code>serverURL</code></label>
+            <div class="control">
+              <input class="input" id="serverURL" type="text" placeholder="e.g https://twikoo.vercel.app" value="https://twikoo.vercel.app">
             </div>
           </div>
           <div class="field">
